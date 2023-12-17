@@ -23,8 +23,16 @@ $conn = new mysqli(
     $username,
     $password,
     $databaseName,
-    3306,
-    ...$sslOptions  // Unpack the array using the ... operator
+    3306
+);
+
+// Apply SSL options separately
+$conn->ssl_set(
+    $sslOptions['ssl']['keyfile'],
+    $sslOptions['ssl']['certfile'],
+    $sslOptions['ssl']['cafile'],
+    null,
+    null
 );
 
 echo "Connected successfully";

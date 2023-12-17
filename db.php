@@ -25,7 +25,6 @@ $conn = new mysqli(
     $databaseName,
     3306,
     NULL,
-    NULL,  // Remove this extra argument
     $sslOptions
 );
 

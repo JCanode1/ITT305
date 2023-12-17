@@ -1,7 +1,7 @@
 <?php
 $serverName = "jokesdb-server.mysql.database.azure.com";
 $databaseName = "jokes_DB";
-$username = "ghitbyareg";
+$username = "ghitbyareg";   
 $password = "Password1!";
 
 // Adjust the paths based on the location of your PHP scripts

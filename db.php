@@ -1,11 +1,7 @@
-
 <?php
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
-
-
 
 $serverName = "jokesdb-server.mysql.database.azure.com";
 $databaseName = "jokes_db";
@@ -22,12 +18,21 @@ $sslOptions = array(
     ),
 );
 
-
-$conn = new mysqli($serverName, $username, $password, $databaseName, 3306, null, $sslOptions);
+$conn = new mysqli(
+    $serverName,
+    $username,
+    $password,
+    $databaseName,
+    3306,
+    NULL,
+    NULL,  // Remove this extra argument
+    $sslOptions
+);
 
 echo "Connected successfully";
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
 ?>

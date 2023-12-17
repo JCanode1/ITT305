@@ -3,7 +3,7 @@
 $serverName = "jokesdb-server.mysql.database.azure.com";
 $databaseName = "jokes_DB";
 $username = "ghitbyareg";
-$password = "your_password"; // Replace with your actual database password
+$password = "Password1!"; // Replace with your actual database password
 
 // Create connection
 $conn = new mysqli($serverName, $username, $password);

@@ -1,18 +1,18 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
 
-// modify these settings according to the account on your database server.
-$host = "localhost";
-$port = "3306"; 
-$username = "PHPtest";
-$user_pass = "password";
-$database_in_use = "jokes_DB";
+$serverName = "jokesdb-server.mysql.database.azure.com";
+$databaseName = "jokes_DB";
+$username = "ghitbyareg";
+$password = "your_password"; // Replace with your actual database password
 
+// Create connection
+$conn = new mysqli($serverName, $username, $password, $databaseName);
 
-$mysqli = new mysqli($host, $username, $user_pass, $database_in_use);
-if ($mysqli->connect_error) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+// You can use this $conn object for executing SQL queries in your application.
+
 ?>

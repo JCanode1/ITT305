@@ -1,5 +1,9 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+
 $serverName = "jokesdb-server.mysql.database.azure.com";
 $databaseName = "jokes_DB";
 $username = "ghitbyareg";
@@ -12,7 +16,7 @@ $conn = new mysqli($serverName, $username, $password);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-    
+
 echo "Connected successfully to the MySQL server.";
 
 

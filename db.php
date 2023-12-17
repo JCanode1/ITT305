@@ -23,16 +23,9 @@ $conn = new mysqli(
     $username,
     $password,
     $databaseName,
-    3306
-);
-
-// Apply SSL options separately
-$conn->ssl_set(
-    $sslOptions['ssl']['keyfile'],
-    $sslOptions['ssl']['certfile'],
-    $sslOptions['ssl']['cafile'],
+    3306,
     null,
-    null
+    $sslOptions
 );
 
 echo "Connected successfully";

@@ -1,4 +1,12 @@
+
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
+
+
 $serverName = "jokesdb-server.mysql.database.azure.com";
 $databaseName = "jokes_db";
 $username = "ghitbyareg";   

@@ -24,7 +24,6 @@ $conn = new mysqli(
     $password,
     $databaseName,
     3306,
-    NULL,
     $sslOptions
 );
 

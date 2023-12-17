@@ -1,6 +1,6 @@
 <?php
 $serverName = "jokesdb-server.mysql.database.azure.com";
-$databaseName = "jokes_DB";
+$databaseName = "jokes_db";
 $username = "ghitbyareg";   
 $password = "Password1!";
 
@@ -14,7 +14,10 @@ $sslOptions = array(
     ),
 );
 
+
 $conn = new mysqli($serverName, $username, $password, $databaseName, 3306, null, $sslOptions);
+
+echo "Connected successfully";
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

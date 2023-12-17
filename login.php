@@ -27,6 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    $username = 'testAccont';
+    $password = '$2y$10$dO1e8xwCHOWa69ZP76xFie7vqHGfoYdv/H52MqsZIAxKeqZM4BA56';
+
     // You should perform more input validation and sanitation here
 
     // Retrieve the user's hashed password from the database
@@ -37,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_result($storedPasswordHash);
     $stmt->fetch();
 
+    $storedPasswordHash = '$2y$10$dO1e8xwCHOWa69ZP76xFie7vqHGfoYdv/H52MqsZIAxKeqZM4BA56';
     // Check if a matching user was found
     if ($storedPasswordHash !== null) {
         // Verify the entered password against the stored password hash

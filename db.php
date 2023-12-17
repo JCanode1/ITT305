@@ -24,7 +24,7 @@ $conn = new mysqli(
     $password,
     $databaseName,
     3306,
-    $sslOptions
+    ...$sslOptions  // Unpack the array using the ... operator
 );
 
 echo "Connected successfully";

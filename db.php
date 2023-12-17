@@ -12,6 +12,9 @@ $conn = new mysqli($serverName, $username, $password);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+    
+echo "Connected successfully to the MySQL server.";
+
 
 // Create the database
 $sql = "CREATE DATABASE IF NOT EXISTS $databaseName";
